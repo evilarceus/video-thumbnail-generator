@@ -23,7 +23,7 @@ export default class ThumbnailGenerator {
     this.percent = `${opts.percent}%` || '90%';
     this.logger = opts.logger || null;
     this.size = opts.size || '320x240';
-    this.fileNameFormat = '%b-thumbnail-%r-%000i';
+    this.fileNameFormat = opts.fileNameFormat || '%b-thumbnail-%r-%000i';
     this.tmpDir = opts.tmpDir || '/tmp';
 
     // by include deps here, it is easier to mock them out
